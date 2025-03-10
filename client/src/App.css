@@ -1,0 +1,199 @@
+/* 确保整个应用全屏显示，且组件竖向排列 */
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* 设置浅灰色背景 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative; /* 让 ::before 相对于 body 定位 */
+}
+
+/* 添加遮罩层 */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* 半透明黑色遮罩 */
+  z-index: 0; /* 确保它在内容下面 */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column; /* 组件竖向排列 */
+  align-items: center;
+  width: 100%;
+  min-height: 100vh; /* 确保最小高度为一整屏 */
+}
+
+/* 头部导航栏样式 */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5px; /* 增加左右的留白 */
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* 控制最大宽度，防止过宽 */
+.navbar-container {
+  width: 100%;
+  max-width: 1200px; /* 限制最大宽度 */
+  margin: 0 auto; /* 居中 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.65rem;
+  margin-left:10%;
+  font-size: 24px;
+  font-weight: 800;
+  color: black;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* 默认状态 */
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  position: relative; /* 让伪元素相对于文本定位 */
+  padding: 5px 0; /* 给下划线留空间 */
+  transition: color 0.3s ease; /* 颜色平滑变化 */
+}
+
+/* 悬停时文本变绿 */
+.nav-links a:hover {
+  color: green;
+}
+
+/* 只在文本下方添加横线 */
+.nav-links a::after {
+  content: ""; /* 伪元素必须要有 content */
+  position: absolute;
+  left: 50%; /* 初始状态居中 */
+  bottom: -2px; /* 使下划线紧贴文本 */
+  width: 0%; /* 默认不显示 */
+  height: 2px; /* 下划线的厚度 */
+  background-color: green; /* 绿色 */
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* 让动画有过渡 */
+}
+
+/* 悬停时，展开下划线 */
+.nav-links a:hover::after {
+  width: 100%; /* 下划线完全展开 */
+  left: 0; /* 保持左对齐 */
+}
+
+
+.contact-btn {
+  padding: 8px 15px;
+  border: 2px solid black;
+  border-radius: 2px;
+  border-width: 2px;
+  margin-right:100px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.contact-btn:hover {
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+}
+
+
+/* 主体内容区域 */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; /* 确保占满整个视口高度 */
+  position: relative;
+}
+
+/* 每个子组件的样式 */
+.content-section {
+  width: 100%;
+  background: white;
+}
+
+
+.hero-section {
+  text-align: left;
+  color: white;
+  margin: 150px auto; /* 确保它位于 Banner 之下 */
+  background: rgba(0, 0, 0, 0); /* 轻微透明背景，提高可读性 */
+
+  left:0;
+  align-items: center;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+
+
+.hero-section h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  color:white;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero-button {
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.hero-button:hover {
+  background-color: #218838;
+}
+
+
+/* 页脚 */
+.footer {
+  width: 100%;
+  background: #343a40;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto;
+}
