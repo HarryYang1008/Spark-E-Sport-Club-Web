@@ -1,19 +1,31 @@
+@media (max-width: 768px) {
+  body {
+    background-size: cover; /* 小屏幕改回 cover 适配 */
+    background-position: center top; /* 确保居中 */
+  }
+}
+
 /* 确保整个应用全屏显示，且组件竖向排列 */
 html {
+  width:99%;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa; /* 设置浅灰色背景 */
+  background-color: #ffffff; /* 设置浅灰色背景 */
 }
 
 body {
-  margin: 0;
+  margin-left: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  height: 100vh;
   background: url("background.jpg") no-repeat center center fixed;
   background-size: cover;
   position: relative; /* 让 ::before 相对于 body 定位 */
 }
+
+
+
 
 /* 添加遮罩层 */
 body::before {
@@ -22,13 +34,13 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.3); /* 半透明黑色遮罩 */
   z-index: 0; /* 确保它在内容下面 */
 }
 
 .app-container {
-  display: flex;
+  display: grid;
   flex-direction: column; /* 组件竖向排列 */
   align-items: center;
   width: 100%;
@@ -130,26 +142,25 @@ body::before {
 
 /* 主体内容区域 */
 .main-content {
-  display: flex;
+  margin:0px;
+  display: grid;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh; /* 确保占满整个视口高度 */
   position: relative;
 }
 
-/* 每个子组件的样式 */
-.content-section {
-  width: 100%;
-  background: white;
-}
 
 
+/* ============================== Hero部分样式 ===================================== */
 .hero-section {
+  padding-left:15%;
+  padding-top:300px;
+  padding-bottom: 100px;
   text-align: left;
   color: white;
-  margin: 150px auto; /* 确保它位于 Banner 之下 */
+  margin: 150px 500px; /* 确保它位于 Banner 之下 */
   background: rgba(0, 0, 0, 0); /* 轻微透明背景，提高可读性 */
 
   left:0;
@@ -162,14 +173,14 @@ body::before {
 
 .hero-section h1 {
   color: white;
-  font-size: 48px;
+  font-size: 55px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .hero-section p {
   color:white;
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 20px;
 }
 
@@ -188,6 +199,148 @@ body::before {
 }
 
 
+
+
+
+
+/* ============================== 社区部分样式 ===================================== */
+.community-section {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto auto 80px auto;
+  padding: 40px;
+}
+
+.community-text {
+  width: 70%;
+}
+
+.community-subtitle {
+  color: green;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.community-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.community-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.community-link {
+  font-size: 16px;
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.community-link:hover {
+  text-decoration: underline;
+}
+
+.community-image {
+  width: 40%;
+}
+
+.community-image img {
+  height: auto; /* 确保图片等比例缩小 */
+  max-width: 300px;
+  margin-left:70px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/* ================= Community Engagement 样式 ================================== */
+.engagement-section {
+  padding-left: 10px;
+  background: white;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 40px 20px;
+  text-align: left;
+}
+
+.engagement-subtitle {
+  color: green;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.engagement-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.engagement-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.engagement-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 30%;
+}
+
+.engagement-card img {
+  max-width: 400px;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-content h3 span {
+  font-size: 22px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.engagement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
 /* 页脚 */
 .footer {
   width: 100%;
@@ -197,3 +350,6 @@ body::before {
   padding: 15px 0;
   margin-top: auto;
 }
+
+
+
