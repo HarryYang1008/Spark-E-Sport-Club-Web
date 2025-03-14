@@ -1,13 +1,9 @@
-@media (max-width: 768px) {
-  body {
-    background-size: cover; /* 小屏幕改回 cover 适配 */
-    background-position: center top; /* 确保居中 */
-  }
-}
+
 
 /* 确保整个应用全屏显示，且组件竖向排列 */
 html {
-  width:99%;
+  overflow-x: hidden;
+  width:98%;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -17,8 +13,8 @@ html {
 body {
   margin-left: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  height: 100vh;
+  font-family: Arial, sans-serif; 
+  height: 100%;
   background: url("background.jpg") no-repeat center center fixed;
   background-size: cover;
   position: relative; /* 让 ::before 相对于 body 定位 */
@@ -34,7 +30,7 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: rgba(0, 0, 0, 0.3); /* 半透明黑色遮罩 */
   z-index: 0; /* 确保它在内容下面 */
 }
@@ -48,11 +44,16 @@ body::before {
 }
 
 /* 头部导航栏样式 */
+.titlelogo{
+  max-height: 80px;
+  width:auto;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 5px; /* 增加左右的留白 */
+  
   background-color: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -73,14 +74,12 @@ body::before {
 }
 
 .logo {
-  font-size: 1.65rem;
   margin-left:10%;
-  font-size: 24px;
-  font-weight: 800;
-  color: black;
+  
 }
 
 .nav-links {
+  
   display: flex;
   gap: 30px;
   align-items: center;
@@ -343,7 +342,7 @@ body::before {
 
 /* 页脚 */
 .footer {
-  width: 100%;
+  width: 115%;
   background: #343a40;
   color: white;
   text-align: center;
@@ -353,3 +352,12 @@ body::before {
 
 
 
+@media (width: 430px) {
+  body{
+    width:137%
+    
+  }
+  .footer{
+    width:115%
+  }
+}
