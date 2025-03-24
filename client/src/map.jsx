@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import "./App.css"; // 引入全局样式
 import HeroSection from "./main_elements/HeroSection.js";
 import CommunitySection from "./main_elements/CommunitySection"; // 引入新组件
-import CommunityEngagement from "./main_elements/CommunityEngagement"; // 引入新组件
+import CommunityEngagement from "./main_elements/CommunityEngagement";
+import ContactSection from "./main_elements/ContactSection";// 引入新组件
 import logo from "./logo.png";
 
 class AAAB extends Component {
@@ -25,15 +26,28 @@ class AAAB extends Component {
 
         
         <body>
+
+
+          
+
+
+
           <main className="main-content">
             <HeroSection /> {/* 加入 Hero 组件 */}
             <CommunitySection /> {/* 社区信息组件 */}
             <CommunityEngagement />
+            <ContactSection />
 
             <footer className="footer">
               <p>© 2025 AAAB. All rights reserved.</p>
             </footer>
           </main>
+
+          <div className="blog-page">
+          </div>
+
+
+
         </body>
         
 
