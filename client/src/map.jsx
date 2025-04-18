@@ -10,7 +10,8 @@ class AAAB extends Component {
   render() {
     return (
       <div className="app-container">
-        {/* 头部导航栏 */}
+
+        {/*/////////////////////////////////////////////////  顶部导航栏 /////////////////////////////////////////////////////*/}
         <header className="navbar">
           <div className="logo">
             <img className="titlelogo" src={logo} alt="Photo Uploads" />
@@ -25,22 +26,30 @@ class AAAB extends Component {
         </header>
 
         
-        <body>
 
+
+        <body>
 
           
 
 
-
+          {/*//////////////////////////////////////////////////  主体内容部分 //////////////////////////////////////////////////////*/}
+          
           <main className="main-content">
-            <HeroSection /> {/* 加入 Hero 组件 */}
-            <CommunitySection /> {/* 社区信息组件 */}
-            <CommunityEngagement />
-            <ContactSection />
-
+            <HeroSection />              {/* 加入 Hero 组件 */}
+            <CommunitySection />         {/* 社区信息组件 */}
+            <CommunityEngagement />      {/* 社区交流组件 */}
+            <ContactSection />           {/* 联系我们组件组件 */}
+ 
+            
+            {/*//////////////////////////////////////////////////  页脚部分 //////////////////////////////////////////////////////*/}
             <footer className="footer">
-              <p>© 2025 AAAB. All rights reserved.</p>
+              <p>© {new Date().getFullYear()} AAAB. All rights reserved.</p>
+              <p>Designed by Weikang_Yang.studio</p>
             </footer>
+
+
+
           </main>
 
           <div className="blog-page">
