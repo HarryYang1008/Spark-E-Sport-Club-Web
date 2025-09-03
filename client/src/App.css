@@ -495,3 +495,100 @@ body::before {
   justify-content: space-between;
   padding: 4px 0;
 }
+
+
+/* ================= About Us 样式 ================================== */
+
+.staff-section {
+  margin-top:50px;
+  padding: 40px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.staff-section h2 {
+  font-family: Anton; /* 电竞感强的字体 */
+  font-weight: 900;        /* 加粗 */
+  color: rgb(0, 0, 0);            /* 白字 */
+  font-size: 50px;
+  margin-left: 10px;
+  white-space: nowrap;
+  margin-bottom: 30px;
+}
+
+.staff-cards {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.staff-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  width: 200px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.staff-card:hover {
+  transform: translateY(-5px);
+}
+
+.staff-avatar {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.staff-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.staff-tag {
+  font-size: 14px;
+  color: #666;
+  margin: 4px 0;
+}
+
+.staff-rating {
+  font-size: 14px;
+  color: #f39c12;
+}
+
+.staff-price {
+  font-size: 15px;
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.staff-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: #ff4d4f;
+  color: white;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.staff-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+  justify-content: center;
+}
+
+.staff-label {
+  background-color: #f3e8ff;        /* 淡紫色背景 */
+  color: #6b21a8;                   /* 深紫色文字 */
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-weight: 500;
+}
