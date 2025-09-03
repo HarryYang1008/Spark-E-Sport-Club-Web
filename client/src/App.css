@@ -49,6 +49,28 @@ body::before {
   width:auto;
 }
 
+.logo {
+  display: flex;
+  align-items: center;  /* ⭐⭐ 加这行确保图片和文字垂直居中 ⭐⭐ */
+  margin-left: 10%;
+}
+
+.logo-text {
+  font-family: 'Orbitron', sans-serif; /* 电竞感强的字体 */
+  font-weight: 900;        /* 加粗 */
+  font-style: italic;      /* 斜体 */
+  color: white;            /* 白字 */
+  font-size: 50px;
+  margin-left: 10px;
+  text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -5px  5px 0 #8f0c88,
+     5px 5px 0 #000;  /* 黑色描边 */
+  white-space: nowrap;
+  margin-left: 10%;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;

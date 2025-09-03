@@ -1,70 +1,63 @@
 import React, { Component } from "react";
 import "./App.css"; // 引入全局样式
 import HeroSection from "./main_elements/HeroSection.js";
-import CommunitySection from "./main_elements/CommunitySection"; // 引入新组件
+import CommunitySection from "./main_elements/CommunitySection";
 import CommunityEngagement from "./main_elements/CommunityEngagement";
-import ContactSection from "./main_elements/ContactSection";// 引入新组件
+import ContactSection from "./main_elements/ContactSection";
+import AboutPage from "./main_elements/AboutPage"; // 引入 About 页面
 import logo from "./logo.png";
 
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+// ✅ 主页组件
 class AAAB extends Component {
   render() {
     return (
       <div className="app-container">
-
-        {/*/////////////////////////////////////////////////  顶部导航栏 /////////////////////////////////////////////////////*/}
+        {/* 顶部导航栏 */}
         <header className="navbar">
           <div className="logo">
             <img className="titlelogo" src={logo} alt="Photo Uploads" />
+            <span className="logo-text">SPARK 电竞社区</span>
           </div>
+
           <nav className="nav-links">
-            <a href="#">首页</a>
-            <a href="#">关于我们</a>
+            <Link to="/">首页</Link>
+            <Link to="/about">关于我们</Link>
             <a href="#">服务</a>
             <a href="#">博客</a>
-            <b href="#" className="contact-btn">CONTACT</b>
+            <b className="contact-btn">CONTACT</b>
           </nav>
         </header>
 
-        
+        {/* 主体内容 */}
+        <main className="main-content">
+          <HeroSection />
+          <CommunitySection />
+          <CommunityEngagement />
+          <ContactSection />
 
-
-        <body>
-
-          
-
-
-          {/*//////////////////////////////////////////////////  主体内容部分 //////////////////////////////////////////////////////*/}
-          
-          <main className="main-content">
-            <HeroSection />              {/* 加入 Hero 组件 */}
-            <CommunitySection />         {/* 社区信息组件 */}
-            <CommunityEngagement />      {/* 社区交流组件 */}
-            <ContactSection />           {/* 联系我们组件组件 */}
- 
-            
-            {/*//////////////////////////////////////////////////  页脚部分 //////////////////////////////////////////////////////*/}
-            <footer className="footer">
-              <p>© {new Date().getFullYear()} AAAB. All rights reserved.</p>
-              <p>Designed by Weikang_Yang.studio</p>
-            </footer>
-
-
-
-          </main>
-
-          <div className="blog-page">
-          </div>
-
-
-
-        </body>
-        
-
-        {/* 页脚 */}
-       
+          {/* 页脚 */}
+          <footer className="footer">
+            <p>© {new Date().getFullYear()} AAAB. All rights reserved.</p>
+            <p>Designed by Weikang_Yang.studio</p>
+          </footer>
+        </main>
       </div>
     );
   }
 }
 
-export default AAAB;
+// ✅ App 包含 Router 和所有页面路由
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<AAAB />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;

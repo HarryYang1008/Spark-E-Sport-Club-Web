@@ -6,18 +6,21 @@ const CommunitySection = () => {
     <section className="community-section">
       <div className="community-text">
         <h4 className="community-subtitle">JOIN OUR COMMUNITY</h4>
-        <h2 className="community-title">求同存異，溝通包容，運作獨立，合作互動</h2>
+        <h2 className="community-title">竞技共荣，交流互鉴，社群自治，团队共进</h2>
         <p className="community-description">
-  以聯誼為中心, 以網絡和平面媒體為工具, 以文化藝術交流為方式, 為會員, 社團, 商務機構, 亞美族裔以及中美之間提供一個溝通和交流合作的平台。<br /><br />
+  以电竞为核心，以陪玩和代练为服务，以玩家聚合为方式，为个人玩家、战队、平台、赞助商以及整个电竞生态提供一个互动和合作的平台。<br /><br />
 
-  個別會員認識交流<br />
-  商業會員資訊互通<br />
-  社團之間溝通互動<br />
-  族群之間交流了解<br />
-  中美之間友誼互信<br /><br />
+  玩家之间娱乐交流<br />
+  陪玩服务专业贴心<br />
+  代练服务高效安全<br />
+  战队之间切磋互动<br />
+  社区之间凝聚共进<br /><br />
 
-  <strong>會員要求：</strong> 謙卑坦誠 仁愛和平 上進守法 服務奉獻。<br />
-  <strong>中心工作：</strong> 聯誼織網，為合作夥伴、會員、社團、族裔、中美之間建溝通的橋樑。（通過各種文化藝術教育訊息等交流活動）
+  
+
+  <strong>玩家要求：</strong> 尊重公平，诚实守信，积极进取，合作共赢。<br />
+<strong>核心工作：</strong> 竞技交流，为玩家、战队、平台、赞助商之间搭建互动的桥梁。（通过陪玩服务、代练服务、赛事活动等电竞交流）
+
 </p>
         <a href="#" className="community-link">Get in touch</a>
       </div>
