@@ -499,17 +499,27 @@ body::before {
 
 /* ================= About Us 样式 ================================== */
 
+.about-page {
+  background-image: url('background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* 让背景覆盖整个页面高度 */
+  color: white; /* 若背景图较深，可以统一字体颜色 */
+  padding-bottom: 40px; /* 给底部一些留白 */
+}
+
+
 .staff-section {
   margin-top:50px;
   padding: 40px;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #ffffff00;
 }
 
 .staff-section h2 {
   font-family: Anton; /* 电竞感强的字体 */
   font-weight: 900;        /* 加粗 */
-  color: rgb(0, 0, 0);            /* 白字 */
+  color: white;            /* 白字 */
   font-size: 50px;
   margin-left: 10px;
   white-space: nowrap;
@@ -592,3 +602,5 @@ body::before {
   border-radius: 16px;
   font-weight: 500;
 }
+
+
