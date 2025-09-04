@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 const staffList = [
     {
     name: "Rita",
-    avatar: "/staffs/staff1.png", // 放到 public/staffs 目录下
+    avatar: `${process.env.PUBLIC_URL}/staffs/staff1.png`, // 放到 public/staffs 目录下
     tag: "电竞解说",
     rating: 4.8,
     reviews: 128,
@@ -16,7 +16,7 @@ const staffList = [
   },
   {
     name: "Akira",
-    avatar: "/staffs/staff2.png",
+    avatar: `${process.env.PUBLIC_URL}/staffs/staff2.png`,
     tag: "技术总监",
     rating: 4.9,
     reviews: 94,
@@ -26,7 +26,7 @@ const staffList = [
   },
   {
     name: "Yuna",
-    avatar: "/staffs/staff3.png",
+    avatar: `${process.env.PUBLIC_URL}/staffs/staff3.png`,
     tag: "社区策划",
     rating: 4.7,
     reviews: 76,

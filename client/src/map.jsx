@@ -7,7 +7,9 @@ import ContactSection from "./main_elements/ContactSection";
 import AboutPage from "./main_elements/AboutPage"; // 引入 About 页面
 import logo from "./logo.png";
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {HashRouter,Routes,Route} from "react-router-dom"; // ✅ 引入 HashRouter
+import { Link } from 'react-router-dom';
+
 
 // ✅ 主页组件
 class AAAB extends Component {
@@ -49,15 +51,18 @@ class AAAB extends Component {
 }
 
 // ✅ App 包含 Router 和所有页面路由
+
+
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<AAAB />} />
         <Route path="/about" element={<AboutPage />} />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
+
 
 export default App;

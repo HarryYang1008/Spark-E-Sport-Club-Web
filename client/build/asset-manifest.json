@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Spark-E-Sport-Club-Web/static/css/main.ebdef76f.css",
-    "main.js": "/Spark-E-Sport-Club-Web/static/js/main.75f5c48d.js",
+    "main.js": "/Spark-E-Sport-Club-Web/static/js/main.7e074ca6.js",
     "static/js/787.c4e7f8f9.chunk.js": "/Spark-E-Sport-Club-Web/static/js/787.c4e7f8f9.chunk.js",
     "static/media/background.jpg": "/Spark-E-Sport-Club-Web/static/media/background.79940aa0df307614fce5.jpg",
     "static/media/logo.png": "/Spark-E-Sport-Club-Web/static/media/logo.59d7d864676fb38d0938.png",
@@ -11,11 +11,11 @@
     "static/media/card3.jpg": "/Spark-E-Sport-Club-Web/static/media/card3.9c5df03bb880883fd53b.jpg",
     "index.html": "/Spark-E-Sport-Club-Web/index.html",
     "main.ebdef76f.css.map": "/Spark-E-Sport-Club-Web/static/css/main.ebdef76f.css.map",
-    "main.75f5c48d.js.map": "/Spark-E-Sport-Club-Web/static/js/main.75f5c48d.js.map",
+    "main.7e074ca6.js.map": "/Spark-E-Sport-Club-Web/static/js/main.7e074ca6.js.map",
     "787.c4e7f8f9.chunk.js.map": "/Spark-E-Sport-Club-Web/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ebdef76f.css",
-    "static/js/main.75f5c48d.js"
+    "static/js/main.7e074ca6.js"
   ]
 }
