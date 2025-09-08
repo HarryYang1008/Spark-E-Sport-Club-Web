@@ -706,3 +706,33 @@ body::before {
   line-height: 1.7;
   color: #444;
 }
+
+
+
+/************************ Services Page 服务页面 ******************************/
+
+.service-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.service-card {
+  background-color: #f5f2fd;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.service-features {
+  margin-top: 12px;
+  padding-left: 20px;
+  color: #444;
+}

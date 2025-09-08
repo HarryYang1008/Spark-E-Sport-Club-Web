@@ -4,7 +4,12 @@ import HeroSection from "./main_elements/HeroSection.js";
 import CommunitySection from "./main_elements/CommunitySection";
 import CommunityEngagement from "./main_elements/CommunityEngagement";
 import ContactSection from "./main_elements/ContactSection";
+
+
 import AboutPage from "./main_elements/AboutPage"; // 引入 About 页面
+import ServicesPage from "./main_elements/ServicesPage.js"; // 引入 Servvices 页面
+
+
 import logo from "./logo.png";
 
 import {HashRouter,Routes,Route} from "react-router-dom"; // ✅ 引入 HashRouter
@@ -26,7 +31,7 @@ class AAAB extends Component {
           <nav className="nav-links">
             <Link to="/">首页</Link>
             <Link to="/about">关于我们</Link>
-            <a href="#">服务</a>
+            <Link to="/services">服务</Link>
             <a href="#">博客</a>
             <b className="contact-btn">CONTACT</b>
           </nav>
@@ -59,6 +64,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AAAB />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicesPage />} />
       </Routes>
     </HashRouter>
   );
